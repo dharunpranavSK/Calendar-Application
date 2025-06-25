@@ -59,7 +59,7 @@
 
 .add-event {
   background-color: #0b7cc2;
-  color:#0b7cc2;
+  color: #0b7cc2;
   font-weight: bold;
   padding: 6px 14px;
   border-radius: 6px;
@@ -82,7 +82,7 @@
   background: white;
   border-radius: 12px;
   padding: 20px;
-  box-shadow:  4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Day Headers */
@@ -100,7 +100,7 @@
   position: relative;
   background-color: #ffffff;
   border-radius: 10px;
-  height: 100px;
+  min-height: 100px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.08);
   padding: 8px;
   display: flex;
@@ -108,6 +108,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   transition: 0.2s ease;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .calendar-day:hover {
@@ -126,19 +128,47 @@
 .calendar-day .event-placeholder {
   margin-top: 30px;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  max-height: 70px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.event-placeholder::-webkit-scrollbar {
+  width: 4px;
+}
+
+.event-placeholder::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 2px;
 }
 
 /* Styling for days outside current month */
 .calendar-day.dimmed {
-  background-color: #f0f0f0;
-  color: #bbb;
-  opacity: 0.5;
+  display: none; /* Hides dimmed days completely */
 }
 
 /* Highlight today's date */
 .calendar-day.today {
   border: 2px solid #2d98da;
   background-color: #eaf4ff;
+}
+
+.event-item {
+  background-color: white;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-top: 2px;
+  font-size: 12px;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.event-item:hover {
+  white-space: normal;
+  overflow: visible;
+  background-color: #f4f7fe;
+  font-size: 10px;
 }
