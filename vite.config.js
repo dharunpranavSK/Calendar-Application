@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/calendar-app/', // <-- your repo name
+  base: '/Calendar-Application/', // <-- your repo name
 })
