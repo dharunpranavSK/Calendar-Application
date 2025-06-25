@@ -1,0 +1,37 @@
+/* .topbar {
+  background-color: white;
+  color: white;
+  padding:20px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+} */
+
+
+.topbar {
+  background-color: white;
+  color: white;
+  padding:20px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  transform: scale(1.55);
+  box-shadow: 1px 1px 1px 1px rgba(0.05, 0.05, 0.05, 0.05);
+  margin-right: 20px;
+}
